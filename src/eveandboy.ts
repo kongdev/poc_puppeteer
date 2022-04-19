@@ -94,6 +94,7 @@ export const crawlingEvenandboy = async () => {
                 page.waitForSelector('.loading-screen.active', { hidden: true }),
             ])
 
+            // scroll down
             let isLoadingAvailable = true
             while (isLoadingAvailable) {
                 await scrollPageToBottom(page, { size: 20, delay: 40 })
@@ -110,24 +111,6 @@ export const crawlingEvenandboy = async () => {
                     isLoadingAvailable = false
                 }
             }
-
-            // scroll down
-            // await page.evaluate(async () => {
-            //     await new Promise<void>((resolve) => {
-            //         const distance = 10
-            //         const delay = 50
-
-            //         const timer = setInterval(async () => {
-            //             const docs: any = document.scrollingElement
-            //             docs.scrollBy(0, distance)
-            //             const loading = await page.evaluate((): any => document.scrollingElement)
-            //             if (docs.scrollTop + window.innerHeight >= docs.scrollHeight) {
-            //                 clearInterval(timer)
-            //                 resolve()
-            //             }
-            //         }, delay)
-            //     })
-            // })
 
             const pageData = await page.evaluate(() => {
                 return {
