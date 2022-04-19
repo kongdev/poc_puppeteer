@@ -1,2 +1,3 @@
-import { evenandboy } from './eveandboy'
-evenandboy()
+import { crawlingEvenandboy } from './eveandboy'
+
+crawlingEvenandboy()
