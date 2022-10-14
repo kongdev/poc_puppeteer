@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "tsc"
+    "build": "tsc",
+    "start": "TZ='UTC' node dist/"
   },
   "author": "",
   "license": "ISC",

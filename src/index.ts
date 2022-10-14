@@ -1,3 +1,2 @@
-import { crawlingEvenandboy } from './eveandboy'
-
-crawlingEvenandboy()
+import {run} from './github'
+run()
